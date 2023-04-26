@@ -1,0 +1,10 @@
+flask
+numpy
+pandas
+csv
+math
+random
+gunicorn
+matplotlib
+sklearn
+heapq
