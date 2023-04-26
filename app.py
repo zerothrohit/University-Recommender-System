@@ -8,7 +8,7 @@ from sklearn import neighbors, datasets
 from numpy.random import permutation
 from sklearn.metrics import precision_recall_fscore_support
 import UnderGraduateServer
-app = Flask(__name__, static_folder='../static/dist', template_folder='../static')
+app = Flask(__name__)
 
 @app.route('/')
 def index():
@@ -136,7 +136,7 @@ def undergraduatealgo():
   
 @app.route('/graduatealgo')
 def graduatealgo():
-    data = pd.read_csv('C:/Users/Krish Sanghvi/University_Recommendation_System-master/University_Recommendation_System-master/WebScraped_data/csv/Processed_data.csv')
+    data = pd.read_csv('WebScraped_data\csv\Final.csv')
     data.drop(data.columns[data.columns.str.contains('unnamed',case = False)],axis = 1, inplace = True)
     greV = float(request.args.get("greV"))
     greQ = float(request.args.get("greQ"))
