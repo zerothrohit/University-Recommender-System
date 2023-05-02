@@ -84,9 +84,9 @@ def UniversityRank():
   while True:
     try:
       location1 = html.index('.htm">', location)
-      print(location1)
+      #print(location1)
       location2 =html.index('</a>', location1)
-      print(location2)
+      #print(location2)
       result[html[(location1 + len('.htm">')): location2]] =rank
       rank =rank +1
       location =location2 +1
@@ -177,7 +177,7 @@ def Recommendations(data):
   
    
 def main():
-   print("loading Recent University data")
+   #print("loading Recent University data")
   
    user_data =extractRankingField('WebScraped_data/csv/MERGED2016_17_PP.csv', ['INSTNM', 'CITY', 'STABBR' ,'TUITIONFEE_OUT',  'SAT_AVG_ALL', 'ADM_RATE_ALL', 'DEBT_MDN_SUPP', 'UGDS_MEN'])
    college_rank = UniversityRank()
@@ -194,7 +194,7 @@ def main():
       else:
         result = Recommendations(filter_data)
 
-      print("Result in college",result)  
+      #print("Result in college",result)  
       return result 
 
 if __name__ == "__main__": 

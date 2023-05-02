@@ -45,7 +45,7 @@ def knn(trainSet, test_instance, k):
         distances[x] = distance[0]
 
     sorted_distances = sorted(distances.items(), key=lambda x: x[1])
-    print(sorted_distances[:5])
+    #print(sorted_distances[:5])
 
  
     neighbors_list = []
@@ -62,7 +62,7 @@ def knn(trainSet, test_instance, k):
             duplicateNeighbors[responses] += 1
         else:
             duplicateNeighbors[responses] = 1
-    print(responses)
+    #print(responses)
 
     sortedNeighbors = sorted(duplicateNeighbors.items(), key=lambda x: x[1], reverse=True)
     return(sortedNeighbors, neighbors_list)
