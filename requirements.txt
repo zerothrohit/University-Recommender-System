@@ -4,3 +4,4 @@ pandas
 gunicorn
 matplotlib
 scikit-learn
+wheel
