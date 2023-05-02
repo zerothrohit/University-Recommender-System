@@ -9,6 +9,8 @@ from numpy.random import permutation
 from sklearn.metrics import precision_recall_fscore_support
 import UnderGraduateServer
 app = Flask(__name__)
+app.config['TIMEOUT'] = 120
+
 
 @app.route('/')
 def index():
